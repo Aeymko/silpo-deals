@@ -81,6 +81,16 @@
   --ambient-3: oklch(0.42 0.1 240 / 0.5);
 }
 
+/* On phones the header covers more of the screen, so its frosted state is kept brighter. */
+@media (width < 40rem) {
+  :root {
+    --glass-floating: oklch(1 0 0 / 0.86);
+  }
+  .dark {
+    --glass-floating: oklch(0.32 0.012 260 / 0.72);
+  }
+}
+
 @theme inline {
   --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
@@ -141,7 +151,7 @@
   @apply glass-surface;
   background-color: color-mix(
     in oklab,
-    var(--glass-strong) calc(var(--scroll-depth, 0) * 100%),
+    var(--glass-floating, var(--glass-strong)) calc(var(--scroll-depth, 0) * 100%),
     var(--glass)
   );
   backdrop-filter: blur(calc(24px + 16px * var(--scroll-depth, 0))) saturate(180%);
