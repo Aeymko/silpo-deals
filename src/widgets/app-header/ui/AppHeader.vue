@@ -12,7 +12,7 @@ defineEmits<{ refresh: [] }>()
 
 <template>
   <div class="sticky top-0 z-20 px-3 pt-3 sm:px-6">
-    <header class="glass bg-glass relative mx-auto w-full max-w-[1920px] overflow-hidden rounded-[1.75rem]">
+    <header class="glass-floating relative mx-auto w-full max-w-[1920px] overflow-hidden rounded-[1.75rem]">
       <div class="flex flex-wrap items-center gap-3 p-2.5 sm:px-3">
         <div class="flex items-center gap-2.5 pl-1">
           <span

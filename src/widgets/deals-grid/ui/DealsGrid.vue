@@ -133,7 +133,7 @@ const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
       v-if="y > 800"
       variant="ghost"
       size="icon-lg"
-      class="glass bg-glass-strong hover:bg-glass-strong fixed right-5 bottom-5 z-30 size-12 rounded-full"
+      class="glass-floating hover:bg-glass-strong fixed right-5 bottom-5 z-30 size-12 rounded-full"
       aria-label="Нагору"
       @click="scrollToTop"
     >
